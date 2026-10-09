@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="id">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Baca — The Origin Venerable</title>
+    <meta name="description" content="Baca The Origin Venerable, novel kultivasi berlatar Bandung 2054." />
+    <link rel="icon" href="favicon.svg" type="image/svg+xml" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,500;1,9..144,300;1,9..144,500&family=Outfit:wght@300;400;500&family=Source+Serif+4:ital,opsz,wght@0,8..60,400;0,8..60,600;1,8..60,400&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/style.css" />
+    <script src="js/boot-theme.js"></script>
+  </head>
+  <body data-page="baca">
+    <div class="read-progress" aria-hidden="true"></div>
+    <a class="skip" href="#chapter">Lewati ke bab</a>
+    <header class="site-header">
+      <a class="brand" href="index.html">
+        <svg class="brand-mark" viewBox="0 0 32 32" aria-hidden="true">
+          <path fill="currentColor" d="M16 3.2l1.35 9.15L26.8 16l-9.45 3.65L16 28.8l-1.35-9.15L6.2 16l9.45-3.65z" />
+        </svg>
+        <span class="brand-name">The Origin <span>Venerable</span></span>
+      </a>
+      <button class="nav-toggle icon-btn" data-nav-toggle aria-label="Menu">☰</button>
+      <nav class="nav">
+        <a href="index.html" data-nav="home">Awal</a>
+        <a href="baca.html?bab=prolog" data-nav="baca">Baca</a>
+        <a href="dunia.html" data-nav="dunia">Dunia</a>
+        <a href="tentang.html" data-nav="tentang">Tentang</a>
+      </nav>
+      <div class="header-tools">
+        <button class="icon-btn wide" id="btn-toc" aria-label="Daftar bab" title="Daftar bab">Bab</button>
+        <button class="icon-btn" id="btn-settings" aria-label="Pengaturan" title="Tampilan">Aa</button>
+      </div>
+    </header>
+
+    <div class="backdrop" id="backdrop"></div>
+    <aside class="drawer" id="drawer" aria-label="Daftar bab">
+      <h2>Daftar bab</h2>
+      <div class="toc-list" id="toc"></div>
+    </aside>
+    <aside class="settings" id="settings" aria-label="Pengaturan baca">
+      <h2>Tampilan</h2>
+      <div class="setting-row">
+        <span>Tema</span>
+        <div class="seg">
+          <button data-theme-btn="void">Malam</button>
+          <button data-theme-btn="dusk">Senja</button>
+          <button data-theme-btn="paper">Kertas</button>
+        </div>
+      </div>
+      <div class="setting-row">
+        <span>Ukuran</span>
+        <div class="seg">
+          <button data-size-btn="1.05rem">A</button>
+          <button data-size-btn="1.2rem" class="is-on">A</button>
+          <button data-size-btn="1.4rem">A</button>
+        </div>
+      </div>
+      <p class="muted" style="margin-top: 1rem; font-size: 0.88rem">
+        Panah kiri/kanan untuk pindah bab. Progresmu tersimpan di perangkat ini.
+      </p>
+    </aside>
+
+    <main class="reader" id="chapter"></main>
+
+    <script type="module" src="js/common.js"></script>
+    <script type="module" src="js/reader.js"></script>
+  </body>
+</html>
